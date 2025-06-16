@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Redirecting...</title>
+  <script>
+    // Get the 'target' parameter from the URL
+    const params = new URLSearchParams(window.location.search);
+    const target = params.get('target');
+
+    if (target) {
+      // Decode the URL-encoded target parameter
+      const decodedUrl = decodeURIComponent(target);
+
+      // Redirect to the decoded URL
+      window.location.href = decodedUrl;
+    } else {
+      // Show an error message if no target provided
+      document.body.innerHTML = "<h2>Error: No target URL specified.</h2>";
+    }
+  </script>
+</head>
+<body>
+  <p>Redirecting to your offer...</p>
+</body>
+</html>
