@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Exclusive Deals – June 2025</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f4f4f4;
+      margin: 0;
+      padding: 20px;
+    }
+    .container {
+      max-width: 600px;
+      margin: auto;
+    }
+    .offer {
+      background-color: #fff;
+      padding: 20px;
+      border-radius: 10px;
+      margin-bottom: 20px;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    }
+    .offer h2 {
+      margin-top: 0;
+      color: #333;
+    }
+    .offer p {
+      color: #666;
+    }
+    .offer a {
+      display: inline-block;
+      margin-top: 10px;
+      padding: 10px 15px;
+      background-color: #007bff;
+      color: #fff;
+      text-decoration: none;
+      border-radius: 6px;
+    }
+    .offer img {
+      max-width: 100%;
+      border-radius: 8px;
+      margin-bottom: 10px;
+    }
+    .header {
+      text-align: center;
+      margin-bottom: 30px;
+    }
+    .header h1 {
+      font-size: 26px;
+      color: #222;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div class="header">
+      <h1>💡 Best Deals for Smart Shoppers</h1>
+      <p>Curated tech, health, and travel offers</p>
+    </div>
+
+    <div class="offer">
+      <img src="https://thexuit.com/cdn/shop/files/20000.png?v=1732174212&width=1000" alt="theXuit Product">
+      <h2>theXuit – Smart Glasses Power</h2>
+      <p>Power accessories for Ray-Ban Meta smart glasses. Stay connected longer.</p>
+      <a href="https://www.awin1.com/cread.php?awinmid=115791&awinaffid=2024489" class="awin-link">Check Deal</a>
+    </div>
+
+    <div class="offer">
+      <img src="https://usamedical.com/en/wp-content/uploads/2024/12/USA-Medical-Best-Rated-USA-Medical-CBD-Oil-CBG-Oil-USA-Medical-Shop-1024x719.jpg.webp" alt="USA Medical CBD">
+      <h2>USA Medical – CBD Wellness</h2>
+      <p>Top-quality US-made CBD and health supplements. Boost energy and immunity.</p>
+      <a href="https://www.awin1.com/cread.php?awinmid=39814&awinaffid=2024489" class="awin-link">Shop Now</a>
+    </div>
+
+    <div class="offer">
+      <h2>eSIMania – Travel eSIM</h2>
+      <p>Instant data access in 120+ countries. No roaming, no physical SIM needed.</p>
+      <a href="https://www.awin1.com/cread.php?awinmid=115715&awinaffid=2024489" class="awin-link">Activate eSIM</a>
+    </div>
+
+  </div>
+
+  <script>
+    // Grab clickid from URL parameters
+    const urlParams = new URLSearchParams(window.location.search);
+    const clickid = urlParams.get('clickid');
+
+    if (clickid) {
+      // Append clickref parameter to each affiliate link
+      document.querySelectorAll('a.awin-link').forEach(link => {
+        // Check if link already has parameters
+        const separator = link.href.includes('?') ? '&' : '?';
+        link.href += `${separator}clickref=${clickid}`;
+      });
+    }
+  </script>
+</body>
+</html>
