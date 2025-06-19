@@ -4,18 +4,22 @@
   <meta charset="UTF-8" />
   <title>Redirecting...</title>
   <script>
-    // Get the 'target' parameter from the URL
     const params = new URLSearchParams(window.location.search);
     const target = params.get('target');
+    const id = params.get('id');  // The click ID passed from Propeller
 
     if (target) {
-      // Decode the URL-encoded target parameter
       const decodedUrl = decodeURIComponent(target);
+      const urlObj = new URL(decodedUrl);
 
-      // Redirect to the decoded URL
-      window.location.href = decodedUrl;
+      if (id) {
+        // Set or overwrite clickref param with the click ID
+        urlObj.searchParams.set('clickref', id);
+      }
+
+      // Redirect to modified URL with clickref
+      window.location.href = urlObj.toString();
     } else {
-      // Show an error message if no target provided
       document.body.innerHTML = "<h2>Error: No target URL specified.</h2>";
     }
   </script>
