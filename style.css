@@ -30,6 +30,7 @@ header p {
   font-size: 16px;
   color: #555;
 }
+
 /* Banner Ad Styling */
 .banner-ad {
   text-align: left;
@@ -42,55 +43,87 @@ header p {
   border-radius: 8px;
 }
 
-  /* HOTLIST CARD STYLE */
-  #hotlist .product {
-    display: flex;
+/* HOTLIST CARD STYLE */
+#hotlist .product {
+  display: flex;
+  flex-direction: column;
+  width: 280px;
+  text-decoration: none;
+  color: inherit;
+  background: #fff;
+  border: 1px solid #eee;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+  transition: transform 0.3s ease;
+}
+
+#hotlist .product:hover {
+  transform: translateY(-5px);
+}
+
+#hotlist .product img {
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+}
+
+#hotlist .product-description {
+  padding: 15px;
+  text-align: left;
+}
+
+#hotlist .product-description h3 {
+  font-size: 18px;
+  margin-bottom: 10px;
+  color: #222;
+}
+
+#hotlist .product-description p {
+  font-size: 14px;
+  color: #555;
+  margin: 5px 0;
+}
+
+#hotlist .disclaimer {
+  font-size: 12px;
+  color: #999;
+  margin-top: 10px;
+}
+
+/* HOTLIST LAYOUT: Banner left, products right */
+#hotlist > div {
+  display: flex;
+  align-items: flex-start; /* top-align banner and products */
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+#hotlist .banner-ad {
+  flex: 0 0 250px; /* fixed width for banner */
+}
+
+#hotlist .products-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  flex: 1; /* take remaining space */
+}
+
+#hotlist .products-container .product {
+  width: calc(33.333% - 13.33px); /* 3 per row */
+  box-sizing: border-box;
+}
+
+/* Responsive: stack vertically on small screens */
+@media screen and (max-width: 900px) {
+  #hotlist > div {
     flex-direction: column;
-    width: 280px;
-    text-decoration: none;
-    color: inherit;
-    background: #fff;
-    border: 1px solid #eee;
-    border-radius: 12px;
-    overflow: hidden;
-    box-shadow: 0 4px 12px rgba(0,0,0,0.05);
-    transition: transform 0.3s ease;
   }
-
-  #hotlist .product:hover {
-    transform: translateY(-5px);
-  }
-
-  #hotlist .product img {
+  #hotlist .products-container .product {
     width: 100%;
-    height: 180px;
-    object-fit: cover;
   }
-
-  #hotlist .product-description {
-    padding: 15px;
-    text-align: left;
-  }
-
-  #hotlist .product-description h3 {
-    font-size: 18px;
-    margin-bottom: 10px;
-    color: #222;
-  }
-
-  #hotlist .product-description p {
-    font-size: 14px;
-    color: #555;
-    margin: 5px 0;
-  }
-
-  #hotlist .disclaimer {
-    font-size: 12px;
-    color: #999;
-    margin-top: 10px;
-  }
-
-
+}
 
 nav {
   background-color: #1a1a1a;
@@ -119,7 +152,6 @@ nav a {
   padding: 8px 12px;
   line-height: normal;
 }
-
 
 nav a:hover {
   background-color: #333;
@@ -301,5 +333,3 @@ footer {
   padding: 20px;
   margin-top: 40px;
 }
-
-
