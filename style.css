@@ -32,7 +32,7 @@ header p {
 }
 /* Banner Ad Styling */
 .banner-ad {
-  text-align: center;
+  text-align: left;
   margin: 15px 0;
 }
 
@@ -301,4 +301,5 @@ footer {
   padding: 20px;
   margin-top: 40px;
 }
+
 
