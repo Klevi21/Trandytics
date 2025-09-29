@@ -30,8 +30,17 @@ header p {
   font-size: 16px;
   color: #555;
 }
+/* Banner Ad Styling */
+.banner-ad {
+  text-align: center;
+  margin: 15px 0;
+}
 
-
+.banner-ad img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 8px;
+}
 
   /* HOTLIST CARD STYLE */
   #hotlist .product {
@@ -292,3 +301,4 @@ footer {
   padding: 20px;
   margin-top: 40px;
 }
+
